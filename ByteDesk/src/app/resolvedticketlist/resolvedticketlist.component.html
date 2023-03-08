@@ -1,0 +1,38 @@
+<h1>Resolvedticket List</h1>
+
+<table id="ticket">
+  <tr>
+    <th>TICKET ID</th>
+    <th>DEPARTMENT</th>
+    <th>SUMMARY</th>
+    <th>STATUS</th>
+    <th>DESCRIPTION</th>
+    <th>INFO</th>
+    <th>CLOSE</th>
+    
+  </tr>
+  <tbody *ngFor="let resolved of resolvedRequests |paginate:
+  {
+    itemsPerPage: 5,
+        currentPage: currentPage,
+        totalItems: count
+  }">
+    <tr>
+    
+      <td>{{resolved.ticketId}}</td>
+      <td>{{resolved.department}}</td>
+      <td>{{resolved.ticketSummary}}</td>
+      <td>{{resolved.status}}</td>
+      <td>{{resolved.description}}</td>
+      <td>{{resolved.resolution}}</td>
+      <td  (click)="close(resolved.ticketId,resolved.department)"><i class="fa fa-times" aria-hidden="true"></i></td>
+      
+      
+    </tr>
+  </tbody>
+  
+  
+</table>
+<pagination-controls previousLabel="Previous" nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"></pagination-controls>
+<button class="button" (click)="back()">BACK</button>

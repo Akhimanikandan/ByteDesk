@@ -1,0 +1,65 @@
+
+  <div>
+    
+    <div class="container">
+      <div class="h1"><h1>{{department}} Admin</h1></div>
+        <form  (ngSubmit)="submit(idList)" 
+         #userForm="ngForm">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Ticket ID: {{idList}} </label>
+          </div>
+          <div class="col-75">
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-26">
+            <label for="lname">Department: {{department}}</label>
+          </div>
+        
+        </div>
+        <div class="admin-chat">
+          
+          <strong> Admin:</strong><br>
+          <i>{{resolution}}</i>
+        </div> 
+   
+         <div class="chat-box" *ngFor="let info of infoList">
+          
+          <br>
+
+          <div class="user-chat">
+          User:<br>
+          <i>{{info.userInfo}}</i><br>
+          <br>
+        </div>
+          <div class="admin-chat" *ngIf="info.adminInfo">
+           <strong> Admin:</strong>
+            <br><i>{{info.adminInfo}}</i>
+          </div>
+        
+        </div>
+        <br>
+        <div >
+          
+        </div>
+        <br>
+          <div class="form-group" > 
+          
+            <input required #summary="ngModel" type="text" [(ngModel)]="value" ngModel class="form-control" 
+            required maxlength="1000" name="textbox" placeholder="please enter something">
+         <br>
+            <span *ngIf="summary.invalid && summary.touched" class="error"></span> 
+            <button class="submit" type="submit" [disabled]="userForm.invalid">SUBMIT</button>
+            <button class="submit2" (click)="back()">BACK</button>
+          </div>
+       
+        
+        </form>
+      </div>
+      
+    
+ </div>
+
+

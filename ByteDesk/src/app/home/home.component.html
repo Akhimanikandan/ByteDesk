@@ -1,0 +1,19 @@
+<div class="flex-container">
+    <app-navbar></app-navbar>
+    <div>
+
+        <div class="header"><app-header></app-header></div>
+        <h1 style="color: darkblue;">Dashboard</h1>
+        <button class="btn" (click)="raise()"><i class="fa fa-hand-stop-o" style="font-size:32px"></i><br> Raise
+           <span id="hidden">Ticket</span> </button>
+        <button class="btn" (click)="MyTicket()"><i class="fa fa-folder" style="font-size:32px"></i><br> Open
+            <span id="hidden">Requests</span></button>
+        <button class="btn" (click)="resolvedTicket()"><i class="fa fa-check-square-o"
+                style="font-size:32px"></i><br>Resolved<span id="hidden">Requests</span> </button>
+        <button class="btn" (click)="reassign()"><i class="fa fa-mail-reply" style="font-size:32px"></i><br>Reassigned
+           <span id="hidden">Requests</span> </button>
+
+
+        <router-outlet></router-outlet>
+    </div>
+</div>

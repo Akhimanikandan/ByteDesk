@@ -1,0 +1,73 @@
+.container{
+    width:30vw;
+    height: 70vh;
+    display: grid;
+    background-color: #1f378c;
+    align-items: center;
+    border-radius: 20pt;
+    margin-top: 19vh;
+    margin-bottom: 19vh;
+    margin-right: 35vw;
+    margin-left: 35vw;
+    color: white;
+
+}
+.userName {
+    place-self: center;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    font-style:normal;
+    
+}
+
+.password {
+    place-self: center;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    font-style:normal;
+   
+}
+
+.eyeicon{
+    position:absolute;
+    margin-left: 18vw;
+    margin-top: 3vh;
+    cursor: pointer;
+    font-size:23px; color: black;
+
+}
+input {
+    height: 4vh;
+    width: 20vw;
+    border-radius: 10pt;
+  }
+.copyright {
+    place-self: center;
+    font-size: 2vh;
+    margin-top: 12vh;
+}
+
+#allRights{
+    place-self: center;
+    font-size: 2vh;
+    margin-bottom: 1vh;
+}
+
+button {
+    height: 6vh;
+    width: 20.2vw;
+    border-radius: 18pt;
+    margin-top: 5vh;
+    place-self: center;
+    background-color: #27a572;
+    height: 5vh;
+    color: white;
+}
+img {
+    place-self: center;
+    margin-top: 1vh;
+    width: 20vw;
+  }
+ 

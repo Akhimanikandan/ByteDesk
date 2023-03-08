@@ -1,0 +1,35 @@
+<h1 style="text-align:center;
+color:rgb(31, 31, 90);
+margin-top: 15vh;">
+Raise Ticket</h1>
+<div  style="width:70vw; margin-left: 13vw; margin-top: 8vw;" >
+    <form 
+    [formGroup]="ticketform"
+    (ngSubmit)="submit()"
+     >
+      <label for="fname">Ticket Summary</label>
+      <input  type="text" [(ngModel)]="ticketobj.ticketSummary" ngModel class="form-control" formControlName="ticketsummary"
+      name="firstname" placeholder="Your Summary..">
+      <span *ngIf="ticketsummary!.invalid && ticketsummary!.touched" style="color:red;">Fields are empty </span><br>
+    <br>
+  
+      <label for="lname">Ticket Description</label>
+      <input type="text" [(ngModel)]="ticketobj.description" formControlName="ticketdescription"
+       id="lname" name="lastname" placeholder="Your description..">
+       <span *ngIf="ticketdescription!.invalid && ticketdescription!.touched" style="color:red;">Fields are empty </span><br>
+  <br>
+      <label for="department">Department</label>
+      <select id="department" name="department" [(ngModel)]="ticketobj.department" formControlName="department">
+        
+        
+   
+        <option value="IT">IT</option>
+        <option value="Finance">Finance</option>
+        <option value="Learning">Learning</option>
+        <option value="HR">HR</option>
+      </select>
+    
+      <button type="submit" class="button" [disabled]="ticketform.invalid">Submit</button>
+      <button type="submit" class="button3"(click)="back()"> Back</button>
+    </form>
+  </div>

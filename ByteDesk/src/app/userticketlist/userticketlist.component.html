@@ -1,0 +1,39 @@
+<div>
+  <h1>Ticket List</h1>
+
+<table id="ticket">
+  <tr>
+    <th>TICKET ID</th>
+    <th>DEPARTMENT</th>
+    <th>SUMMARY</th>
+    <th>STATUS</th>
+    <th>DESCRIPTION</th>
+    <th>CANCEL</th>
+  </tr>
+  <tbody *ngFor="let ticket of list | paginate
+  :{
+        itemsPerPage: 5,
+        currentPage: currentPage,
+        totalItems: count
+  }">
+    <tr>
+    
+      <td>{{ticket.ticketId}}</td>
+      <td>{{ticket.department}}</td>
+      <td>{{ticket.ticketSummary}}</td>
+      <td>{{ticket.status}}</td>
+      <td>{{ticket.description}}</td>
+    
+      <td (click)="cancel(ticket.ticketId,ticket.department)"><i class="fa fa-times" aria-hidden="true"></i></td>
+    </tr>
+  </tbody>
+  
+  
+</table>
+<pagination-controls 
+previousLabel="Previous"
+nextLabel="Next"
+(pageChange)="onTableDataChange($event)">
+</pagination-controls>
+<button class="button" (click)="back()">BACK</button>
+</div>

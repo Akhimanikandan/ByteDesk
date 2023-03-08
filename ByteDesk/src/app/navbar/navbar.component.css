@@ -1,0 +1,47 @@
+img{
+    width:10vw;
+    margin-left: -5vw;
+   
+}
+
+.image{
+    margin-top: 1vh;
+    margin-left: 5vw;
+}
+
+.house{
+    display: flex;
+    margin-top: 4vh;
+    margin-left: 2vw;
+    align-items:center;
+}
+
+
+.settings{
+    display: flex;
+    align-items:center;
+    margin-top: 40vh;
+   margin-left: 2vw;
+}
+.logout{
+    display: flex;
+    margin-top: 3vh;
+   margin-left: 2vw;
+      align-items:center;
+}
+.copyright{
+     font-size: 1.5vh;
+     color: #D9D9D6;
+    margin-top: 14vh;
+    margin-left: -1vw;
+    margin-bottom: 5vh;
+}
+.all-rights{
+    margin-left: 1.3vw;
+}
+div{
+    cursor: pointer;
+  
+  }
+
+ 

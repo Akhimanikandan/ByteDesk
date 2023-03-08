@@ -1,0 +1,39 @@
+<div class="reassign">
+  <h1>Reassignticket List</h1>
+<br>
+<table id="ticket">
+  <tr>
+    <th>TICKET ID</th>
+    <th>DEPARTMENT</th>
+    <th>SUMMARY</th>
+    <th>STATUS</th>
+    <th>DESCRIPTION</th>
+    <th>UPDATE</th>
+
+  </tr>
+  <tbody *ngFor="let reassign of content |paginate
+  :{
+    itemsPerPage: 5,
+    currentPage: currentPage,
+    totalItems: count
+  }">
+    <tr>
+      <td>{{reassign.ticketId}}</td>
+      <td>{{reassign.department}}</td>
+      <td>{{reassign.ticketSummary}}</td>
+      <td>{{reassign.status}}</td>
+      <td>{{reassign.description}}</td>
+      
+      <td  (click)="update(reassign.ticketId,reassign.department,reassign.resolution)"><i class="fa fa-pencil" aria-hidden="true"></i></td>
+      
+    
+    </tr>
+  </tbody>
+  
+
+</table>
+<pagination-controls previousLabel="Previous" nextLabel="Next"
+(pageChange)="onTableDataChange($event)"></pagination-controls>
+</div>
+  
+<button class="button" (click)="back()">BACK</button>

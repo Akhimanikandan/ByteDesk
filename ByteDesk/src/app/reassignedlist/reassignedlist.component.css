@@ -1,0 +1,39 @@
+#ticket{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #ticket td, #ticket th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #ticket tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #ticket tr:hover {background-color: #ddd;}
+  
+  .button{
+    background-color: #04AA6D;
+    color: white;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 5vw;
+  }
+  
+  
+  #ticket th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+    text-align: center;
+  }
+  .reassign{
+    text-align: center;
+  }

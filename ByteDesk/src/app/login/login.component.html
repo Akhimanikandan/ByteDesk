@@ -1,0 +1,25 @@
+<form [formGroup]="form"
+(ngSubmit)="login()">
+<div class="container">
+    <img src="../../assets/bytestrone.png" alt="bytestrone logo"/>
+<div class="userName">
+    <label for="userName" class="form-control"><b>Username</b></label>
+    <input type="text"[(ngModel)]="user.userName" formControlName="userName"/>
+    <span *ngIf="userName!.invalid && userName!.touched">UserId is not valid</span>
+</div>
+
+<div class="password">
+    <label for="password" class="required"><b>Password</b></label>
+    <input [type]=" changetype?'password':'text'" [(ngModel)]="user.password"formControlName="password" />
+    <span class="eyeicon" (click)="view()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" ></i></span>
+    <span  *ngIf="password!.invalid && password!.touched">Password is not valid</span>
+</div>
+
+    <button type="submit" [disabled]="form.invalid">Login</button>
+
+
+
+<p class="copyright">copyright &#169; 2022 Bytestrone.</p>
+<p id="allRights">All rights reserved.</p>
+</div>
+</form>
